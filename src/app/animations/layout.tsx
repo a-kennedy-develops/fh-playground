@@ -11,7 +11,7 @@ export default function AnimationsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-800 to-indigo-950">
       <nav className="border-b border-white/10">
         <div className="container mx-auto px-4 py-4">
           <h1 className="text-2xl font-bold text-white">Animations</h1>

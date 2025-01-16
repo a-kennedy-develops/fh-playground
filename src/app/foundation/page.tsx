@@ -37,7 +37,7 @@ export default function FoundationPage() {
               </p>
               <Link
                 href="#apply"
-                className="inline-block bg-[#E31837] text-white px-6 py-3 rounded font-semibold hover:bg-[#c41530] transition-colors"
+                className="inline-block bg-red-600 text-white px-6 py-3 rounded font-semibold hover:bg-red-700 transition-colors"
               >
                 APPLY FOR A GRANT
               </Link>
@@ -58,7 +58,7 @@ export default function FoundationPage() {
           </p>
           <Link
             href="#details"
-            className="inline-block bg-[#E31837] text-white px-8 py-3 rounded font-semibold hover:bg-[#c41530] transition-colors"
+            className="inline-block bg-red-600 text-white px-8 py-3 rounded font-semibold hover:bg-red-700 transition-colors"
           >
             GET THE DETAILS HERE
           </Link>
@@ -128,28 +128,28 @@ export default function FoundationPage() {
 
       {/* Navigation */}
       <nav className="absolute top-4 right-4 space-x-6">
-        <Link href="/about" className="text-white hover:text-[#E31837] font-medium">
+        <Link href="/about" className="text-white hover:text-red-600 font-medium">
           ABOUT US
         </Link>
-        <Link href="/locations" className="text-white hover:text-[#E31837] font-medium">
+        <Link href="/locations" className="text-white hover:text-red-600 font-medium">
           LOCATIONS
         </Link>
       </nav>
 
       {/* Footer */}
-      <footer className="bg-[#002D72] text-white">
+      <footer className="bg-indigo-800 text-white">
         <div className="container mx-auto py-4">
           <nav className="flex justify-center items-center space-x-12">
-            <Link href="/" className="text-xs uppercase tracking-wide hover:text-[#E31837] transition-colors">
+            <Link href="/" className="text-xs uppercase tracking-wide hover:text-red-600 transition-colors">
               Home
             </Link>
-            <Link href="/corporate-social-responsibility" className="text-xs uppercase tracking-wide hover:text-[#E31837] transition-colors">
+            <Link href="/corporate-social-responsibility" className="text-xs uppercase tracking-wide hover:text-red-600 transition-colors">
               Corporate Social Responsibility
             </Link>
-            <Link href="/nonprofit-partners" className="text-xs uppercase tracking-wide hover:text-[#E31837] transition-colors">
+            <Link href="/nonprofit-partners" className="text-xs uppercase tracking-wide hover:text-red-600 transition-colors">
               Nonprofit Partners
             </Link>
-            <Link href="/security" className="text-xs uppercase tracking-wide hover:text-[#E31837] transition-colors">
+            <Link href="/security" className="text-xs uppercase tracking-wide hover:text-red-600 transition-colors">
               Security
             </Link>
           </nav>
