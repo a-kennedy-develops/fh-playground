@@ -10,7 +10,7 @@ export default function Home() {
             First Horizon Playground
           </h1>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
           <Link
             className="flex max-w-xs flex-col gap-4 rounded-xl border-2 border-red-600 bg-white/5 p-4 hover:bg-white/10 transition-all"
             href="/animations"
@@ -27,6 +27,15 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-red-600">Foundation →</h3>
             <div className="text-lg">
               View the First Horizon Foundation page showcasing community impact and grants.
+            </div>
+          </Link>
+          <Link
+            className="flex max-w-xs flex-col gap-4 rounded-xl border-2 border-red-600 bg-white/5 p-4 hover:bg-white/10 transition-all"
+            href="/regions"
+          >
+            <h3 className="text-2xl font-bold text-red-600">Regions →</h3>
+            <div className="text-lg">
+              Experience the Regions Bank website with modern banking solutions and financial tools.
             </div>
           </Link>
         </div>
