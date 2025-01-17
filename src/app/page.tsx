@@ -13,6 +13,15 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
           <Link
             className="flex max-w-xs flex-col gap-4 rounded-xl border-2 border-red-600 bg-white/5 p-4 hover:bg-white/10 transition-all"
+            href="/base"
+          >
+            <h3 className="text-2xl font-bold text-red-600">Next.js Base →</h3>
+            <div className="text-lg">
+              Learn Next.js fundamentals and advanced concepts through interactive examples.
+            </div>
+          </Link>
+          <Link
+            className="flex max-w-xs flex-col gap-4 rounded-xl border-2 border-red-600 bg-white/5 p-4 hover:bg-white/10 transition-all"
             href="/animations"
           >
             <h3 className="text-2xl font-bold text-red-600">Animations →</h3>
