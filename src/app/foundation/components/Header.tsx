@@ -24,13 +24,15 @@ export function Header() {
             </Link>
           </div>
           <div className="flex-1 flex justify-center">
-            <Image
-              src="/images/first-horizon-foundation-logo.png"
-              alt="First Horizon Foundation"
-              width={200}
-              height={40}
-              priority
-            />
+            <Link href="/foundation">
+              <Image
+                src="/images/first-horizon-foundation-logo.png"
+                alt="First Horizon Foundation"
+                width={200}
+                height={40}
+                priority
+              />
+            </Link>
           </div>
           <div className="flex-1" />
         </div>

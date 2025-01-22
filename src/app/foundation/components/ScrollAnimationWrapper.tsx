@@ -1,32 +1,52 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
 
-interface Props {
+interface ScrollAnimationWrapperProps {
   children: React.ReactNode;
   delay?: number;
-  amount?: number;
 }
 
-export function ScrollAnimationWrapper({ 
-  children, 
-  delay = 0,
-  amount = 100 
-}: Props) {
+export function ScrollAnimationWrapper({ children, delay = 0 }: ScrollAnimationWrapperProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const controls = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const isInitiallyVisible = rect.top < window.innerHeight;
+      
+      if (isInitiallyVisible && !hasAnimated) {
+        void controls.start({
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay }
+        });
+        setHasAnimated(true);
+      }
+    }
+  }, [controls, delay, hasAnimated]);
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      void controls.start({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, delay }
+      });
+      setHasAnimated(true);
+    }
+  }, [isInView, controls, delay, hasAnimated]);
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: amount }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ 
-        once: true, 
-        amount: 0.3,  // Trigger when 30% of the element is in view
-        margin: "50px 0px" // Add margin to trigger slightly before element comes into view
-      }}
-      transition={{ 
-        duration: 0.8, 
-        ease: "easeOut",
-        delay 
-      }}
+      ref={ref}
+      initial={{ opacity: 0, y: 25 }}
+      animate={controls}
+      className="will-change-transform"
     >
       {children}
     </motion.div>
